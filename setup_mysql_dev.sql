@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS hbnb_test_db;
 CREATE DATABASE IF NOT EXISTS hbnb_test_db;
 SET GLOBAL validate_password.length = 13;
 SET GLOBAL validate_password.policy = 0;
