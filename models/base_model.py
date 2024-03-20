@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module defines a base class for all models in our hbnb clone"""
-from models import storage
+import models
 from datetime import datetime
 from os import getenv
 import uuid
@@ -13,7 +13,7 @@ Base = declarative_base()
 
 class BaseModel:
     """A base class for all hbnb models"""
-    id = Column(Integer(60), unique=True, nullable=False, primary_key=True)
+    id = Column(String(60), unique=True, nullable=False, primary_key=True)
     created_at = Column(DateTime, nullable=False, default=(datetime.utcnow()))
     updated_at = Column(DateTime, nullable=False, default=(datetime.utcnow()))
     
@@ -51,8 +51,8 @@ class BaseModel:
     def save(self):
         """Updates updated_at with current time when instance is changed"""
         self.updated_at = datetime.now()
-        storage.new(self)
-        storage.save()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """Convert instance into dict format"""
@@ -68,4 +68,4 @@ class BaseModel:
 
     def delete(self):
         """ delete object"""
-        storage.delete(self)
+        models.storage.delete(self)
