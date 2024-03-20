@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+""" new class for sqlAlchemy """
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.orm import relationship
@@ -19,10 +21,12 @@ classes = {
 
 
 class DBStorage:
+    """ create tables in environmental"""
     __engine = None
     __session = None
 
     def __init__(self):
+        """ Initialize environment variables."""
         user = getenv("HBNB_MYSQL_USER")
         passwd = getenv("HBNB_MYSQL_PWD")
         db = getenv("HBNB_MYSQL_DB")
