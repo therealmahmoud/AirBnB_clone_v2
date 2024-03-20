@@ -17,6 +17,7 @@ classes = {
                     'Review': Review
                   }
 
+
 class DBStorage:
     __engine = None
     __session = None
