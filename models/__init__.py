@@ -14,7 +14,7 @@ from os import getenv
 
 env_path = getenv("HBNB_TYPE_STORAGE")
 
-if env_path is "db":
+if env_path == "db":
     storage = DBStorage()
     storage.reload()
 else:
