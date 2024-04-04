@@ -26,9 +26,7 @@ fi
 
 echo "<h1>this is me</h1>" > /data/web_static/releases/test/index.html
 
-if [ ! -e "/data/web_static/current" ]; then
-	ln -sf /data/web_static/releases/test/ /data/web_static/current
-fi
+ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
