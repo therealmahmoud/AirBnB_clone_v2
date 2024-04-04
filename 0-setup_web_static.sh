@@ -37,7 +37,7 @@ ln -sf /data/web_static/releases/test/ /data/web_static/current
 chown -R ubuntu /data/
 chgrp -R ubuntu /data/
 
-echo "
+printf %s  "
 server {
         listen *:8080 default_server;
         listen [::]:8000 default_server;
@@ -48,6 +48,6 @@ server {
 	index index.html index.htm;
         }
 }
-" >> /etc/nginx/sites-available/default
+" > /etc/nginx/sites-available/default
 
 sudo service nginx restart
