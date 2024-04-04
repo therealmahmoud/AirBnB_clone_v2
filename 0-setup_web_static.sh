@@ -58,6 +58,6 @@ printf %s "server {
       root /var/www/html;
       internal;
     }
-}" > /etc/nginx/sites-available/defaul
-t
+}" > /etc/nginx/sites-available/default
+
 sudo service nginx restart
