@@ -38,10 +38,18 @@ chown -R ubuntu /data/
 chgrp -R ubuntu /data/
 
 echo "
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+	root   /var/www/html;
+	index  index.html index.htm;
+
         location /hbnb_static {
         alias /data/web_static/current;
 	index index.html index.htm;
         }
+}
 " >> /etc/nginx/sites-available/default
+
 
 sudo service nginx restart
