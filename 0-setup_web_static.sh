@@ -24,7 +24,7 @@ if [ ! -d "/data/web_static/releases/test/" ]; then
 	mkdir -p /data/web_static/releases/test
 fi
 
-echo "<h1>this is me</h1>" > /data/web_static/releases/test/index.html
+echo "Holberton School" > /data/web_static/releases/test/index.html
 
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 
