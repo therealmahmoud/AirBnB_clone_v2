@@ -14,8 +14,8 @@ def display():
 
 @HBNB.route('/hbnb', strict_slashes=False)
 def display_hbnb():
-    """ Displaying message."""
-    return 'Hello HBNB!'
+    """ Displaying message of hbnb."""
+    return 'HBNB'
 
 
 if __name__ == '__main__':
