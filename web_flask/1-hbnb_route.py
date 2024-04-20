@@ -12,7 +12,8 @@ def display():
     return 'Hello HBNB!'
 
 
-def display():
+@HBNB.route('/hbnb', strict_slashes=False)
+def display_hbnb():
     """ Displaying message."""
     return 'Hello HBNB!'
 
