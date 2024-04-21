@@ -36,6 +36,7 @@ def display_python_user(text="is cool"):
 
 @HBNB.route('/number/<int:n>', strict_slashes=False)
 def display_n(n):
+    """ Displaying message of user."""
     if type(n) == int:
         return f"{n} is a number"
     else:
@@ -44,11 +45,13 @@ def display_n(n):
 
 @HBNB.route('/number_template/<int:n>', strict_slashes=False)
 def display_html(n):
+    """ Displaying message of user."""
     return render_template('5-number.html', number=n)
 
 
 @HBNB.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def odd_or_even(n):
+    """ Displaying message of user."""
     return render_template('6-number_odd_or_even.html', number=n)
 
 
