@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Starts a Flask web application. """
-from models.engine import storage
+import models
 from flask import Flask
 from flask import render_template
 
@@ -13,14 +13,14 @@ def states_list():
 
     States are sorted by name.
     """
-    states = storage.all("State")
+    states = models.storage.all("State")
     return render_template("7-states_list.html", states=states)
 
 
 @HBNB.teardown_appcontext
 def teardown(exc):
     """Remove the current SQLAlchemy session."""
-    storage.close()
+    models.storage.close()
 
 
 if __name__ == "__main__":
