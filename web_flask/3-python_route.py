@@ -30,7 +30,7 @@ def display_c_user(text):
 def display_python_user(text="is cool"):
     """ Displaying message of user."""
     text = text.replace('_', ' ')
-    return "python" + " " + text
+    return "Python" + " " + text
 
 
 if __name__ == '__main__':
